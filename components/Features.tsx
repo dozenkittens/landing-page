@@ -1,4 +1,5 @@
 import styles from "./Features.module.css";
+import Image from "next/image";
 
 const services = [
   {
@@ -63,9 +64,11 @@ export default function Features() {
         <div className={styles.cards}>
           {services.map((service) => (
             <article className={styles.card} key={service.number}>
-              <img
+              <Image
                 src={`https://images.unsplash.com/${service.image}?w=900`}
                 alt={service.title}
+                width={900}
+                height={600}
               />
               <div className={styles.cardContent}>
                 <span>{service.number}</span>
